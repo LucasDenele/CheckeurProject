@@ -1,0 +1,18 @@
+[{
+"access_token": "access",
+"protocole":"http",
+"users":["toto"],
+"passwords":["admin"]
+},
+{
+"access_token":"access2",
+"protocole":"smtp",
+"users":["user1","user2","user3"],
+"passwords":["admin1","admin2","admin3"]
+},
+{
+"access_token":"access3",
+"protocole":"http",
+"users":["Lucas"],
+"passwords":["denele"]
+}]
