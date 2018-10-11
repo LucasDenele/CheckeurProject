@@ -7,10 +7,15 @@
 import json
 import logging
 from logging.handlers import RotatingFileHandler
+import begin
 
 
 # constants:
 LOGGER = 0
+
+# begin:
+@begin.start
+@begin.convert(access_file=str, log_all_file=str, log_error_file=str)
 
 
 # ----------------------------
