@@ -89,5 +89,6 @@ def get_connections_informations(json_localisation: str):
 if __name__ == "__main__":
     """
     """
-    LOGGER = create_loggers("D:/ISEN/Python/Checkeur/CheckeurProject/logAll.txt", "D:/ISEN/Python/Checkeur/CheckeurProject/logError.txt")
+    LOGGER = create_loggers("D:/ISEN/Python/Checkeur/CheckeurProject/logAll.txt",
+                            "D:/ISEN/Python/Checkeur/CheckeurProject/logError.txt")
     get_connections_informations("D:/ISEN/Python/Checkeur/CheckeurProject/checkeur.json")
