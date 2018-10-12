@@ -9,19 +9,21 @@ import logging
 from logging.handlers import RotatingFileHandler
 import begin
 
-
 # constants:
 LOGGER = 0
-
-# begin:
-@begin.start
-@begin.convert(access_file=str, log_all_file=str, log_error_file=str)
 
 
 # ----------------------------
 # Part 2 - all functions
 #
 # ----------------------------
+
+def test_co(access_token: str, protocole: str, users: list, passwords: list):
+    for i in range(0, len(users)):
+        print("Connection at " + access_token + " with " + protocole + " / user : " + users[i] +
+              " ; password : " + passwords[i])
+
+
 def create_loggers(file_localisation_all: str, file_localisation_error: str):
     """ Create the logger for all information"""
 
@@ -33,7 +35,6 @@ def create_loggers(file_localisation_all: str, file_localisation_error: str):
 
     # Create the handler, with a security space. The log file will have 1Mo max size
     file_handler = RotatingFileHandler(file_localisation_all, 'a', 1000000, 1)
-
     # Apply the handler to the logger
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
@@ -50,50 +51,100 @@ def create_loggers(file_localisation_all: str, file_localisation_error: str):
 
 def json_parse(file: dict):
     """ Parse the json file to get the informations for the connections"""
+    global LOGGER
 
     # ==== Errors handler ====
-    # Check if the access_token has given
+    # Check if the access_token has given and is right type
     if None == file.get('access_token'):
-        LOGGER.error("KeyError : 'access_token' has not been given")
-    # Check if the access_token has given
+        if None == file.get('name'):
+            LOGGER.error("KeyError : 'access_token' has not been given, machine has no name")
+        else:
+            LOGGER.error("KeyError : 'access_token' has not been given in " + file.get('name'))
+        return
+    if not isinstance(file.get('access_token'), str):
+        if None == file.get('name'):
+            LOGGER.error("FormatError : 'access_token' must be a string, machine has no name")
+        else:
+            LOGGER.error("FormatError : 'access_token' must be a string in " + file.get('name'))
+        return
+    # Check if the protocole has given and is right type
     if None == file.get("protocole"):
-        LOGGER.error("KeyError : 'protocole' has not been given")
-    # Check if the access_token has given
+        if None == file.get('name'):
+            LOGGER.error("KeyError : 'protocole' has not been given, machine has no name")
+        else:
+            LOGGER.error("KeyError : 'protocole' has not been given in " + file.get('name'))
+        return
+    if not isinstance(file.get('protocole'), str):
+        if None == file.get('name'):
+            LOGGER.error("FormatError : 'protocole' must be a string, machine has no name")
+        else:
+            LOGGER.error("FormatError : 'protocole' must be a string in " + file.get('name'))
+        return
+    # Check if the users has given and is right type
     if None == file.get("users"):
-        LOGGER.error("KeyError : 'users' has not been given")
-    # Check if the access_token has given
+        if None == file.get('name'):
+            LOGGER.error("KeyError : 'users' has not been given, machine has no name")
+        else:
+            LOGGER.error("KeyError : 'users' has not been given in " + file.get('name'))
+        return
+    if not isinstance(file.get('users'), list):
+        if None == file.get('name'):
+            LOGGER.error("FormatError : 'users' must be a string, machine has no name")
+        else:
+            LOGGER.error("FormatError : 'users' must be a string in " + file.get('name'))
+        return
+    # Check if the passwords has given and is right type
     if None == file.get("passwords"):
-        LOGGER.error("KeyError : 'passwords' has not been given")
-    # Check if there are the same numbers of user names and passwords
+        if None == file.get('name'):
+            LOGGER.error("KeyError : 'passwords' has not been given, machine has no name")
+        else:
+            LOGGER.error("KeyError : 'passwords' has not been given in " + file.get('name'))
+        return
+    if not isinstance(file.get('passwords'), list):
+        if None == file.get('name'):
+            LOGGER.error("FormatError : 'passwords' must be a string, machine has no name")
+        else:
+            LOGGER.error("FormatError : 'passwords' must be a string in " + file.get('name'))
+        return
+    # Check if there are the same numbers of user names and passwords and are right type
     if len(file["users"]) > len(file["passwords"]):
-        LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) + " password(s)")
+        if None == file.get('name'):
+            LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
+                         " password(s), machine has no name")
+        else:
+            LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
+                         " password(s) in " + file.get('name'))
+        return
     if len(file["passwords"]) > len(file["users"]):
-        LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) + " user name(s)")
+        if None == file.get('name'):
+            LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
+                         " user name(s), machine has no name")
+        else:
+            LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
+                         " user name(s) in " + file.get('name'))
+        return
 
-    # ==== Return ===
-    # return the different parts of the needed informations
-    return file["access_token"], file["protocole"], file["users"], file["passwords"]
+    test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 
 
-def get_connections_informations(json_localisation: str):
+def start_connections(json_localisation: str):
     """ Return a list with the informations for the connections to do"""
 
-    check_list = list()
     # Open the file
     with open(json_localisation) as checkeur_data:
         data = checkeur_data.read()
-        # Parse the bloc to have the informations
-        check_list.append(json.loads(data, object_hook=json_parse))
-    return check_list
+    # Parse the bloc to have the informations
+    json.loads(data, object_hook=json_parse)
 
 
 # ----------------------------
-# Part 3 - main entry
+# Part 3 - file entry
+#
 # ----------------------------
 
-if __name__ == "__main__":
-    """
-    """
-    LOGGER = create_loggers("D:/ISEN/Python/Checkeur/CheckeurProject/logAll.txt",
-                            "D:/ISEN/Python/Checkeur/CheckeurProject/logError.txt")
-    get_connections_informations("D:/ISEN/Python/Checkeur/CheckeurProject/checkeur.json")
+@begin.convert(access_file=str, log_all_file=str, log_error_file=str)
+@begin.start
+def run(access_file, log_all_file, log_error_file):
+    global LOGGER
+    LOGGER = create_loggers(log_all_file, log_error_file)
+    start_connections(access_file)

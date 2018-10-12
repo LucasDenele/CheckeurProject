@@ -1,1 +1,28 @@
 2018-10-11 17:30:22,008 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:41:12,590 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:41:43,352 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:44:18,081 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:44:21,361 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:46:41,514 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:46:59,285 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:47:21,630 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:48:28,172 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 14:52:45,080 :: ERROR :: KeyError : 'access_token' has not been given
+2018-10-12 15:00:45,220 :: ERROR :: KeyError : 'access_token' has not been given inServ1
+2018-10-12 15:01:08,698 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:02:48,573 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:03:00,305 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:03:00,305 :: ERROR :: KeyError : 'protocole' has not been given, machine has no name
+2018-10-12 15:07:25,363 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:07:38,547 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:21:46,399 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:28:36,223 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:29:43,660 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 15:52:24,339 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 16:14:11,940 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 16:14:11,940 :: ERROR :: FormatError : 'users' must be a string in Serv2
+2018-10-12 16:14:11,940 :: ERROR :: FormatError : 'users' must be a string, machine has no name
+2018-10-12 16:15:06,387 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 16:18:23,550 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 16:18:48,986 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 16:20:53,629 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
