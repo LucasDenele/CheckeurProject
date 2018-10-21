@@ -1,10 +1,11 @@
 [{
-"access_token": "access",
-"protocole":"http",
+"name":"Serv1",
+"protocole":["http","lol"],
 "users":["toto"],
 "passwords":["admin"]
 },
 {
+"name":"Serv2",
 "access_token":"access2",
 "protocole":"smtp",
 "users":["user1","user2","user3"],
