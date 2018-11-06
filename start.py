@@ -8,6 +8,7 @@ import json
 import logging
 from logging.handlers import RotatingFileHandler
 import begin
+import requests
 
 # constants:
 LOGGER = 0
@@ -19,9 +20,12 @@ LOGGER = 0
 # ----------------------------
 
 def test_co(access_token: str, protocole: str, users: list, passwords: list):
-    for i in range(0, len(users)):
-        print("Connection at " + access_token + " with " + protocole + " / user : " + users[i] +
-              " ; password : " + passwords[i])
+    if None != users:
+        for i in range(0, len(users)):
+            print("Connection at " + access_token + " with " + protocole + " / user : " + users[i] +
+                  " ; password : " + passwords[i])
+    else:
+        print("Connection at " + access_token + " with " + protocole)
 
 
 def create_loggers(file_localisation_all: str, file_localisation_error: str):
@@ -55,7 +59,7 @@ def json_parse(file: dict):
 
     # ==== Errors handler ====
     # Check if the access_token has given and is right type
-    if None == file.get('access_token'):
+    if None ==   file.get('access_token'):
         if None == file.get('name'):
             LOGGER.error("KeyError : 'access_token' has not been given, machine has no name")
         else:
@@ -80,49 +84,39 @@ def json_parse(file: dict):
         else:
             LOGGER.error("FormatError : 'protocole' must be a string in " + file.get('name'))
         return
-    # Check if the users has given and is right type
-    if None == file.get("users"):
-        if None == file.get('name'):
-            LOGGER.error("KeyError : 'users' has not been given, machine has no name")
-        else:
-            LOGGER.error("KeyError : 'users' has not been given in " + file.get('name'))
-        return
-    if not isinstance(file.get('users'), list):
-        if None == file.get('name'):
-            LOGGER.error("FormatError : 'users' must be a string, machine has no name")
-        else:
-            LOGGER.error("FormatError : 'users' must be a string in " + file.get('name'))
-        return
-    # Check if the passwords has given and is right type
-    if None == file.get("passwords"):
-        if None == file.get('name'):
-            LOGGER.error("KeyError : 'passwords' has not been given, machine has no name")
-        else:
-            LOGGER.error("KeyError : 'passwords' has not been given in " + file.get('name'))
-        return
-    if not isinstance(file.get('passwords'), list):
-        if None == file.get('name'):
-            LOGGER.error("FormatError : 'passwords' must be a string, machine has no name")
-        else:
-            LOGGER.error("FormatError : 'passwords' must be a string in " + file.get('name'))
-        return
+
     # Check if there are the same numbers of user names and passwords and are right type
-    if len(file["users"]) > len(file["passwords"]):
-        if None == file.get('name'):
-            LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
-                         " password(s), machine has no name")
-        else:
-            LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
-                         " password(s) in " + file.get('name'))
-        return
-    if len(file["passwords"]) > len(file["users"]):
-        if None == file.get('name'):
-            LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
-                         " user name(s), machine has no name")
-        else:
-            LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
-                         " user name(s) in " + file.get('name'))
-        return
+    if None != file.get("users") and None != file.get("passwords"):
+        if len(file["users"]) > len(file["passwords"]):
+            if None == file.get('name'):
+                LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
+                             " password(s), machine has no name")
+            else:
+                LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
+                             " password(s) in " + file.get('name'))
+            return
+        if len(file["passwords"]) > len(file["users"]):
+            if None == file.get('name'):
+                LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
+                             " user name(s), machine has no name")
+            else:
+                LOGGER.error("FormatError : missing " + str(len(file["passwords"]) - len(file["users"])) +
+                             " user name(s) in " + file.get('name'))
+            return
+        if not isinstance(file.get('passwords'), list):
+            if None == file.get('name'):
+                LOGGER.error("FormatError : 'passwords' must be a string, machine has no name")
+            else:
+                LOGGER.error("FormatError : 'passwords' must be a string in " + file.get('name'))
+            return
+        if not isinstance(file.get('users'), list):
+            if None == file.get('name'):
+                LOGGER.error("FormatError : 'users' must be a string, machine has no name")
+            else:
+                LOGGER.error("FormatError : 'users' must be a string in " + file.get('name'))
+            return
+    else:
+        test_co(file["access_token"], file["protocole"], None, None)
 
     test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 

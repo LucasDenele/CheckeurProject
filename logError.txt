@@ -14,3 +14,8 @@
 2018-10-12 16:18:23,550 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
 2018-10-12 16:18:48,986 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
 2018-10-12 16:20:53,629 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 23:15:30,404 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 23:15:53,134 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 23:16:42,208 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
+2018-10-12 23:26:31,938 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP
+2018-10-12 23:27:00,986 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP

@@ -1,8 +1,7 @@
 [{
-"name":"Serv1",
-"protocole":["http","lol"],
-"users":["toto"],
-"passwords":["admin"]
+"name":"ConnectionHTTP",
+"access_token":"access2",
+"protocole":"http"
 },
 {
 "name":"Serv2",
