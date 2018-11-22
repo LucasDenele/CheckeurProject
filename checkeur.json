@@ -1,7 +1,9 @@
 [{
 "name":"ConnectionHTTP",
 "access_token":"access2",
-"protocole":"http"
+"protocole":"http",
+  "users":["Lucas"],
+"passwords":["denele"]
 },
 {
 "name":"Serv2",

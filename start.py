@@ -33,20 +33,21 @@ def create_loggers(file_localisation_all: str, file_localisation_error: str):
 
     # Create the logging objects
     logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
 
     # Create the logs format
     formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
+
+    # Do handler for the error logger
+    file_handler = RotatingFileHandler(file_localisation_error, 'a', 1000000, 1)
+    file_handler.setLevel(logging.ERROR)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
     # Create the handler, with a security space. The log file will have 1Mo max size
     file_handler = RotatingFileHandler(file_localisation_all, 'a', 1000000, 1)
     # Apply the handler to the logger
     file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
-
-    # Do handler for the error logger
-    file_handler = RotatingFileHandler(file_localisation_error, 'a', 1000000, 1)
-    file_handler.setLevel(logging.ERROR)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
@@ -117,7 +118,7 @@ def json_parse(file: dict):
             return
     else:
         test_co(file["access_token"], file["protocole"], None, None)
-
+    LOGGER.info("HelloWorld")
     test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 
 
