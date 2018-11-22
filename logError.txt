@@ -19,3 +19,17 @@
 2018-10-12 23:16:42,208 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
 2018-10-12 23:26:31,938 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP
 2018-10-12 23:27:00,986 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP
+2018-11-22 14:25:05,200 :: ERROR :: FTP : Connection to access2 failed
+2018-11-22 14:26:09,844 :: ERROR :: FTP : Connection to access2 failed
+2018-11-22 14:27:06,205 :: ERROR :: FTP : Connection to access2 failed
+2018-11-22 14:29:56,017 :: ERROR :: FTP : Connection to 127.0.0.1 failed
+2018-11-22 14:36:11,325 :: ERROR :: FTP : Connection to 127.0.0.1 failed
+2018-11-22 15:03:16,344 :: ERROR :: FTP : Connected to 127.0.0.1
+2018-11-22 15:03:55,516 :: ERROR :: FTP : Connected to 127.0.0.1
+2018-11-22 15:13:22,121 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
+2018-11-22 15:19:45,294 :: ERROR :: FTP ::  user : victimeresp
+2018-11-22 15:21:19,882 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
+2018-11-22 16:41:14,651 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
+2018-11-22 16:43:44,754 :: ERROR :: FTP ::  user : victime  
+2018-11-22 16:43:44,755 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
+2018-11-22 16:45:02,091 :: ERROR :: FTP ::  user : victime  Connection failed

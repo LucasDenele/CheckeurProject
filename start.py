@@ -8,7 +8,7 @@ import json
 import logging
 from logging.handlers import RotatingFileHandler
 import begin
-import requests
+import Ftp
 
 # constants:
 LOGGER = 0
@@ -20,12 +20,9 @@ LOGGER = 0
 # ----------------------------
 
 def test_co(access_token: str, protocole: str, users: list, passwords: list):
-    if None != users:
-        for i in range(0, len(users)):
-            print("Connection at " + access_token + " with " + protocole + " / user : " + users[i] +
-                  " ; password : " + passwords[i])
-    else:
-        print("Connection at " + access_token + " with " + protocole)
+    global LOGGER
+    if protocole == 'ftp':
+        Ftp.ftp_test(LOGGER, access_token, users, passwords)
 
 
 def create_loggers(file_localisation_all: str, file_localisation_error: str):
@@ -59,7 +56,7 @@ def json_parse(file: dict):
 
     # ==== Errors handler ====
     # Check if the access_token has given and is right type
-    if None ==   file.get('access_token'):
+    if None == file.get('access_token'):
         if None == file.get('name'):
             LOGGER.error("KeyError : 'access_token' has not been given, machine has no name")
         else:
@@ -116,7 +113,7 @@ def json_parse(file: dict):
                 LOGGER.error("FormatError : 'users' must be a string in " + file.get('name'))
             return
     else:
-        test_co(file["access_token"], file["protocole"], None, None)
+        test_co(file["access_token"], file["protocole"], [], [])
 
     test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 

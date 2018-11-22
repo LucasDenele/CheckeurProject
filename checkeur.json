@@ -1,18 +1,9 @@
-[{
-"name":"ConnectionHTTP",
-"access_token":"access2",
-"protocole":"http"
-},
-{
-"name":"Serv2",
-"access_token":"access2",
-"protocole":"smtp",
-"users":["user1","user2","user3"],
-"passwords":["admin1","admin2","admin3"]
-},
-{
-"access_token":"access3",
-"protocole":"http",
-"users":["Lucas"],
-"passwords":["denele"]
-}]
+[
+  {
+    "name": "ConnectionHTTP",
+    "access_token": "127.0.0.1",
+    "protocole": "ftp",
+    "users": ["victime"],
+    "passwords": ["LaChancla!200"]
+  }
+]
