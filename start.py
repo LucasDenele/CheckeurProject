@@ -20,12 +20,31 @@ LOGGER = 0
 # ----------------------------
 
 def test_co(access_token: str, protocole: str, users: list, passwords: list):
+    global LOGGER
     if None != users:
         for i in range(0, len(users)):
             print("Connection at " + access_token + " with " + protocole + " / user : " + users[i] +
                   " ; password : " + passwords[i])
     else:
         print("Connection at " + access_token + " with " + protocole)
+    if "http" == protocole:
+        #A mettre dans le switch pour http :
+        if not users:
+            http = requests.get(access_token)
+            if( 200 <= http.status_code and 300 >= http.status_code):
+                LOGGER.info("Connection on "+access_token+" is ok")
+            else:
+                LOGGER.error("Connection on"+access_token+" failed")
+        else:
+            for i in range(len(users)):
+                http = requests.get(access_token, auth=(users[i], passwords[i]))
+                if( 200 <= http.status_code and 300 >= http.status_code):
+                    LOGGER.info("Connection on "+access_token+" is ok")
+                else:
+                    LOGGER.error("Connection on"+access_token+" failed")
+
+
+        
 
 
 def create_loggers(file_localisation_all: str, file_localisation_error: str):
@@ -87,7 +106,7 @@ def json_parse(file: dict):
         return
 
     # Check if there are the same numbers of user names and passwords and are right type
-    if None != file.get("users") and None != file.get("passwords"):
+    if None != file.get("users") or None != file.get("passwords"):
         if len(file["users"]) > len(file["passwords"]):
             if None == file.get('name'):
                 LOGGER.error("FormatError : missing " + str(len(file["users"]) - len(file["passwords"])) +
@@ -117,7 +136,8 @@ def json_parse(file: dict):
                 LOGGER.error("FormatError : 'users' must be a string in " + file.get('name'))
             return
     else:
-        test_co(file["access_token"], file["protocole"], None, None)
+        test_co(file["access_token"], file["protocole"], [], [])
+        return
     LOGGER.info("HelloWorld")
     test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 
