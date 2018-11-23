@@ -7,7 +7,6 @@
 import json
 import logging
 from logging.handlers import RotatingFileHandler
-from time import sleep
 import begin
 import Ftp
 import Http
