@@ -1,28 +1,28 @@
 [
   {
-    "name": "FTP",
+    "name": "Exemple utilisateur unique",
     "access_token": "127.0.0.1",
     "protocole": "ftp",
     "users": ["victime"],
-    "passwords": ["LaChancla!"]
+    "passwords": ["motdepasse"]
   },
   {
-    "name": "SFTP",
+    "name": "Exemple multi utilisateur",
     "access_token": "51.75.205.220",
     "protocole": "sftp",
-    "users": ["victime"],
-    "passwords": ["LaChancla!"]
+    "users": ["user1", "user2"],
+    "passwords": ["pwd1", "pwd2"]
   },
   {
-    "name": "SSH",
+    "name": "Exemple utilisateur sans mot de passe",
     "access_token": "51.75.205.220",
     "protocole": "ssh",
-    "users": ["victime"],
-    "passwords": ["LaChancla!"]
+    "users": ["user"],
+    "passwords": [""]
   },
   {
-    "name": "HTTP",
-    "access_token": "http://youtube.com",
+    "name": "Exemple de connexion anonyme",
+    "access_token": "https://youtube.com",
     "protocole": "http"
   }
 ]

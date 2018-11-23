@@ -7,7 +7,15 @@
 import json
 import logging
 from logging.handlers import RotatingFileHandler
-import begin
+
+try:
+    import begin
+except:
+    from os import system
+    system('pip install begins')
+    import begin
+
+
 import Ftp
 import Http
 import Ssh
@@ -22,6 +30,7 @@ LOGGER = 0
 # ----------------------------
 
 def test_co(access_token: str, protocole: str, users: list, passwords: list):
+    """Test the server provided in access_token with every user"""
     global LOGGER
     if protocole == 'ftp':
         Ftp.ftp_test(LOGGER, access_token, users, passwords)
@@ -51,7 +60,7 @@ def create_loggers(file_localisation_all: str, file_localisation_error: str):
     # Create the handler, with a security space. The log file will have 1Mo max size
     file_handler = RotatingFileHandler(file_localisation_all, 'a', 1000000, 1)
     # Apply the handler to the logger
-    file_handler.setLevel(logging.INFO)
+    file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
@@ -147,5 +156,4 @@ def start_connections(json_localisation: str):
 def run(access_file, log_all_file, log_error_file):
     global LOGGER
     LOGGER = create_loggers(log_all_file, log_error_file)
-    print("zboub")
     start_connections(access_file)

@@ -1,4 +1,9 @@
-import requests
+try:
+    import requests
+except:
+    from os import system
+    system('pip install requests')
+    import requests
 
 
 
