@@ -1,86 +1,52 @@
-2018-10-11 17:30:22,008 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:41:12,590 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:41:43,352 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:44:18,081 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:44:21,361 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:46:41,514 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:46:59,285 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:47:21,630 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:48:28,172 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 14:52:45,080 :: ERROR :: KeyError : 'access_token' has not been given
-2018-10-12 15:00:45,220 :: ERROR :: KeyError : 'access_token' has not been given inServ1
-2018-10-12 15:01:08,698 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:02:48,573 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:03:00,305 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:03:00,305 :: ERROR :: KeyError : 'protocole' has not been given, machine has no name
-2018-10-12 15:07:25,363 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:07:38,547 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:21:46,399 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:28:36,223 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:29:43,660 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 15:52:24,339 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 16:14:11,940 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 16:14:11,940 :: ERROR :: FormatError : 'users' must be a string in Serv2
-2018-10-12 16:14:11,940 :: ERROR :: FormatError : 'users' must be a string, machine has no name
-2018-10-12 16:15:06,387 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 16:18:23,550 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 16:18:48,986 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 16:20:53,629 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 23:15:30,404 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 23:15:53,134 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 23:16:42,208 :: ERROR :: KeyError : 'access_token' has not been given in Serv1
-2018-10-12 23:26:31,938 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP
-2018-10-12 23:27:00,986 :: ERROR :: KeyError : 'access_token' has not been given in ConnectionHTTP
-2018-11-22 14:25:05,200 :: ERROR :: FTP : Connection to access2 failed
-2018-11-22 14:26:09,844 :: ERROR :: FTP : Connection to access2 failed
-2018-11-22 14:27:06,205 :: ERROR :: FTP : Connection to access2 failed
-2018-11-22 14:29:56,017 :: ERROR :: FTP : Connection to 127.0.0.1 failed
-2018-11-22 14:36:11,325 :: ERROR :: FTP : Connection to 127.0.0.1 failed
-2018-11-22 15:03:16,344 :: ERROR :: FTP : Connected to 127.0.0.1
-2018-11-22 15:03:55,516 :: ERROR :: FTP : Connected to 127.0.0.1
-2018-11-22 15:13:22,121 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
-2018-11-22 15:19:45,294 :: ERROR :: FTP ::  user : victimeresp
-2018-11-22 15:21:19,882 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
-2018-11-22 16:41:14,651 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
-2018-11-22 16:43:44,754 :: ERROR :: FTP ::  user : victime  
-2018-11-22 16:43:44,755 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
-2018-11-22 16:45:02,091 :: ERROR :: FTP ::  user : victime  Connection failed
-2018-11-23 18:17:23,999 :: INFO :: FTP :: Connected to 127.0.0.1
-2018-11-23 18:17:27,398 :: ERROR :: FTP ::  user : victime - Connection failed
-2018-11-23 18:18:03,437 :: INFO :: FTP :: Connected to 127.0.0.1
-2018-11-23 18:18:06,520 :: ERROR :: FTP ::  user : victime - Connection failed
-2018-11-23 18:18:06,757 :: DEBUG :: starting thread (client mode): 0xebccf748
-2018-11-23 18:18:06,758 :: DEBUG :: Local version/idstring: SSH-2.0-paramiko_2.4.2
-2018-11-23 18:18:06,782 :: DEBUG :: Remote version/idstring: SSH-2.0-OpenSSH_7.4p1 Debian-10+deb9u4
-2018-11-23 18:18:06,782 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
-2018-11-23 18:18:06,791 :: DEBUG :: kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
-2018-11-23 18:18:06,792 :: DEBUG :: Kex agreed: ecdh-sha2-nistp256
-2018-11-23 18:18:06,792 :: DEBUG :: HostKey agreed: ecdsa-sha2-nistp256
-2018-11-23 18:18:06,792 :: DEBUG :: Cipher agreed: aes128-ctr
-2018-11-23 18:18:06,792 :: DEBUG :: MAC agreed: hmac-sha2-256
-2018-11-23 18:18:06,792 :: DEBUG :: Compression agreed: none
-2018-11-23 18:18:06,848 :: DEBUG :: kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
-2018-11-23 18:18:06,850 :: DEBUG :: Switch to new keys ...
-2018-11-23 18:18:06,852 :: DEBUG :: Trying SSH agent key b'39b5471ab0bd8d5f1511892d53a3f683'
-2018-11-23 18:18:06,912 :: DEBUG :: userauth is OK
-2018-11-23 18:18:06,940 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:18:06,940 :: DEBUG :: Trying SSH agent key b'd8ecedc0dadf6d97513dd465e3101c4e'
-2018-11-23 18:18:06,950 :: DEBUG :: userauth is OK
-2018-11-23 18:18:06,970 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:18:06,980 :: DEBUG :: userauth is OK
-2018-11-23 18:18:09,512 :: INFO :: Authentication (password) failed.
-2018-11-23 18:18:09,513 :: ERROR :: SSH ::  user :  victime - Authentification failed
-2018-11-23 18:19:25,281 :: INFO :: FTP :: Connected to 127.0.0.1
-2018-11-23 18:19:28,954 :: ERROR :: FTP ::  user : victime - Connection failed
-2018-11-23 18:19:29,068 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
-2018-11-23 18:19:29,258 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:19:29,284 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:19:31,804 :: INFO :: Authentication (password) failed.
-2018-11-23 18:19:31,804 :: ERROR :: SSH ::  user :  victime - Authentification failed
-2018-11-23 18:19:51,234 :: INFO :: FTP :: Connected to 127.0.0.1
-2018-11-23 18:19:54,477 :: ERROR :: FTP ::  user : victime - Connection failed
-2018-11-23 18:19:54,554 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
-2018-11-23 18:19:54,712 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:19:54,735 :: INFO :: Authentication (publickey) failed.
-2018-11-23 18:19:54,776 :: INFO :: Authentication (password) successful!
-2018-11-23 18:19:54,777 :: INFO :: SSH ::  user :  victime - Authentification success
+2018-11-23 19:11:12,815 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 19:11:12,909 :: INFO :: FTP ::  user : victime  230 Login successful.
+2018-11-23 19:11:12,983 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:11:13,149 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:11:13,178 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:11:13,240 :: INFO :: Authentication (password) successful!
+2018-11-23 19:11:13,241 :: INFO :: SFTP ::  user :  victime - Authentification success
+2018-11-23 19:11:13,281 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:11:13,446 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:11:13,471 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:11:13,507 :: INFO :: Authentication (password) successful!
+2018-11-23 19:11:13,508 :: INFO :: SSH ::  user :  victime - Authentification success
+2018-11-23 19:11:15,124 :: INFO :: HTTP/S :: Connection on http://youtube.com is ok
+2018-11-23 19:13:34,100 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 19:13:34,205 :: INFO :: FTP ::  user : victime  230 Login successful.
+2018-11-23 19:13:34,291 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:13:34,455 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:13:34,480 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:13:34,514 :: INFO :: Authentication (password) successful!
+2018-11-23 19:13:34,515 :: INFO :: SFTP ::  user :  victime - Authentification success
+2018-11-23 19:13:34,554 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:13:34,813 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:13:34,835 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:13:34,870 :: INFO :: Authentication (password) successful!
+2018-11-23 19:13:34,870 :: INFO :: SSH ::  user :  victime - Authentification success
+2018-11-23 19:13:36,437 :: INFO :: HTTP/S :: Connection on http://youtube.com is ok
+2018-11-23 19:14:22,017 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 19:14:22,127 :: INFO :: FTP ::  user : victime  230 Login successful.
+2018-11-23 19:14:22,216 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:14:22,373 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:14:22,398 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:14:22,438 :: INFO :: Authentication (password) successful!
+2018-11-23 19:14:22,438 :: INFO :: SFTP ::  user :  victime - Authentification success
+2018-11-23 19:14:22,469 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:14:22,629 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:14:22,653 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:14:22,689 :: INFO :: Authentication (password) successful!
+2018-11-23 19:14:22,689 :: INFO :: SSH ::  user :  victime - Authentification success
+2018-11-23 19:14:24,048 :: INFO :: HTTP/S :: Connection on http://youtube.com is ok
+2018-11-23 19:15:21,223 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 19:15:21,341 :: INFO :: FTP ::  user : victime  230 Login successful.
+2018-11-23 19:15:21,514 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:15:21,671 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:15:21,698 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:15:21,728 :: INFO :: Authentication (password) successful!
+2018-11-23 19:15:21,728 :: INFO :: SFTP ::  user :  victime - Authentification success
+2018-11-23 19:15:21,766 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 19:15:21,929 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:15:21,952 :: INFO :: Authentication (publickey) failed.
+2018-11-23 19:15:21,993 :: INFO :: Authentication (password) successful!
+2018-11-23 19:15:21,994 :: INFO :: SSH ::  user :  victime - Authentification success
+2018-11-23 19:15:23,038 :: INFO :: HTTP/S :: Connection on http://youtube.com is ok

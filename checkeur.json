@@ -4,7 +4,14 @@
     "access_token": "127.0.0.1",
     "protocole": "ftp",
     "users": ["victime"],
-    "passwords": ["LaChancla!200"]
+    "passwords": ["LaChancla!"]
+  },
+  {
+    "name": "SFTP",
+    "access_token": "51.75.205.220",
+    "protocole": "sftp",
+    "users": ["victime"],
+    "passwords": ["LaChancla!"]
   },
   {
     "name": "SSH",
@@ -12,5 +19,10 @@
     "protocole": "ssh",
     "users": ["victime"],
     "passwords": ["LaChancla!"]
+  },
+  {
+    "name": "HTTP",
+    "access_token": "http://youtube.com",
+    "protocole": "http"
   }
 ]

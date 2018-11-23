@@ -9,7 +9,7 @@ def ftp_test(logger, host: str, user: list = [], pwd: list = []):
         if len(user) is not 0:
             for user_cur in user:
                 try:
-                    resp = ftp.login(user_cur, user.index(user_cur))
+                    resp = ftp.login(user_cur, pwd[user.index(user_cur)])
                     logger.info('FTP ::  user : ' + user_cur + '  ' + resp)
                 except ftp_errors:
                     logger.error('FTP ::  user : ' + user_cur + ' - Connection failed')
