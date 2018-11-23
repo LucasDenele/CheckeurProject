@@ -116,6 +116,7 @@ def json_parse(file: dict):
             return
     else:
         test_co(file["access_token"], file["protocole"], [], [])
+        return
 
     test_co(file["access_token"], file["protocole"], file["users"], file["passwords"])
 

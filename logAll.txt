@@ -45,3 +45,42 @@
 2018-11-22 16:43:44,754 :: ERROR :: FTP ::  user : victime  
 2018-11-22 16:43:44,755 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
 2018-11-22 16:45:02,091 :: ERROR :: FTP ::  user : victime  Connection failed
+2018-11-23 18:17:23,999 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 18:17:27,398 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:18:03,437 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 18:18:06,520 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:18:06,757 :: DEBUG :: starting thread (client mode): 0xebccf748
+2018-11-23 18:18:06,758 :: DEBUG :: Local version/idstring: SSH-2.0-paramiko_2.4.2
+2018-11-23 18:18:06,782 :: DEBUG :: Remote version/idstring: SSH-2.0-OpenSSH_7.4p1 Debian-10+deb9u4
+2018-11-23 18:18:06,782 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 18:18:06,791 :: DEBUG :: kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2018-11-23 18:18:06,792 :: DEBUG :: Kex agreed: ecdh-sha2-nistp256
+2018-11-23 18:18:06,792 :: DEBUG :: HostKey agreed: ecdsa-sha2-nistp256
+2018-11-23 18:18:06,792 :: DEBUG :: Cipher agreed: aes128-ctr
+2018-11-23 18:18:06,792 :: DEBUG :: MAC agreed: hmac-sha2-256
+2018-11-23 18:18:06,792 :: DEBUG :: Compression agreed: none
+2018-11-23 18:18:06,848 :: DEBUG :: kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2018-11-23 18:18:06,850 :: DEBUG :: Switch to new keys ...
+2018-11-23 18:18:06,852 :: DEBUG :: Trying SSH agent key b'39b5471ab0bd8d5f1511892d53a3f683'
+2018-11-23 18:18:06,912 :: DEBUG :: userauth is OK
+2018-11-23 18:18:06,940 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:18:06,940 :: DEBUG :: Trying SSH agent key b'd8ecedc0dadf6d97513dd465e3101c4e'
+2018-11-23 18:18:06,950 :: DEBUG :: userauth is OK
+2018-11-23 18:18:06,970 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:18:06,980 :: DEBUG :: userauth is OK
+2018-11-23 18:18:09,512 :: INFO :: Authentication (password) failed.
+2018-11-23 18:18:09,513 :: ERROR :: SSH ::  user :  victime - Authentification failed
+2018-11-23 18:19:25,281 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 18:19:28,954 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:19:29,068 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 18:19:29,258 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:19:29,284 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:19:31,804 :: INFO :: Authentication (password) failed.
+2018-11-23 18:19:31,804 :: ERROR :: SSH ::  user :  victime - Authentification failed
+2018-11-23 18:19:51,234 :: INFO :: FTP :: Connected to 127.0.0.1
+2018-11-23 18:19:54,477 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:19:54,554 :: INFO :: Connected (version 2.0, client OpenSSH_7.4p1)
+2018-11-23 18:19:54,712 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:19:54,735 :: INFO :: Authentication (publickey) failed.
+2018-11-23 18:19:54,776 :: INFO :: Authentication (password) successful!
+2018-11-23 18:19:54,777 :: INFO :: SSH ::  user :  victime - Authentification success

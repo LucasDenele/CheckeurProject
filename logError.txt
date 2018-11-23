@@ -33,3 +33,9 @@
 2018-11-22 16:43:44,754 :: ERROR :: FTP ::  user : victime  
 2018-11-22 16:43:44,755 :: ERROR :: FTP :: Connection to 127.0.0.1 failed
 2018-11-22 16:45:02,091 :: ERROR :: FTP ::  user : victime  Connection failed
+2018-11-23 18:17:27,398 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:18:06,520 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:18:09,513 :: ERROR :: SSH ::  user :  victime - Authentification failed
+2018-11-23 18:19:28,954 :: ERROR :: FTP ::  user : victime - Connection failed
+2018-11-23 18:19:31,804 :: ERROR :: SSH ::  user :  victime - Authentification failed
+2018-11-23 18:19:54,477 :: ERROR :: FTP ::  user : victime - Connection failed

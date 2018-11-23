@@ -1,9 +1,16 @@
 [
   {
-    "name": "ConnectionHTTP",
+    "name": "FTP",
     "access_token": "127.0.0.1",
     "protocole": "ftp",
     "users": ["victime"],
     "passwords": ["LaChancla!200"]
+  },
+  {
+    "name": "SSH",
+    "access_token": "51.75.205.220",
+    "protocole": "ssh",
+    "users": ["victime"],
+    "passwords": ["LaChancla!"]
   }
 ]
